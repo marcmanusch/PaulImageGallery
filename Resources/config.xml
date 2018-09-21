@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+
+        <!-- Grundeinstellungen -->
+
+        <element type="boolean">
+            <name>active</name>
+            <label>Aktiv</label>
+        </element>
+
+        <element type="number">
+            <name>pageID</name>
+            <label>Seiten-ID der Gallery</label>
+        </element>
+
+
+    </elements>
+</config>

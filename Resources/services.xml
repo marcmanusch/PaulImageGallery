@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://symfony.com/schema/dic/services"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="paul_image_gallery.subscriber.template_registration"
+                 class="PaulImageGallery\Subscriber\TemplateRegistration">
+            <argument type="service" id="template"/>
+            <argument>%paul_image_gallery.plugin_dir%</argument>
+            <tag name="shopware.event_subscriber"/>
+        </service>
+
+        <service class="PaulImageGallery\Subscriber\CollectConfig" id="paul_image_gallery.subscriber.collect_config">
+            <argument id="service_container" type="service"/>
+            <tag name="shopware.event_subscriber"/>
+        </service>
+
+    </services>
+</container>
